@@ -12,7 +12,7 @@ namespace DigitalLibrary.Domain.Repositories
     {
         // Query Operations
         Task<Author?> GetByIdAsync(AuthorId id, CancellationToken cancellationToken = default);
-        Task<Author?> GetByNameAsynce(AuthorId id, CancellationToken cancellationToken = default);
+        Task<Author?> GetByNameAsynce(string name, CancellationToken cancellationToken = default);
         Task<IReadOnlyCollection<Author>> GetAll(CancellationToken cancellationToken = default);
 
         // Command Operations
