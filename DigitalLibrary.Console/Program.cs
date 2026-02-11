@@ -79,7 +79,7 @@ using (var scope = serviceProvider.CreateScope())
         }
 
         // ── Scenario E: Return Book ────────────────────────────────────────────
-        Console.WriteLine("\n── Scenario E: Return Book ──");
+        Console.WriteLine("\n\n── Scenario E: Return Book ──");
         await returnBook.ExecuteAsync(bookId);
         Console.WriteLine("✅ Book returned successfully");
 
