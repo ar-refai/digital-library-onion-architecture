@@ -17,6 +17,6 @@ namespace DigitalLibrary.Domain.Repositories
 
         // Command Operations
         Task AddAuthorAsync(Author author, CancellationToken cancellationToken = default);
-        Task Remove(Author author);
+        void Remove(Author author);
     }
 }

@@ -19,8 +19,4 @@
     <ProjectReference Include="..\DigitalLibrary.Domain\DigitalLibrary.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Persistence\Repositories\" />
-  </ItemGroup>
-
 </Project>
