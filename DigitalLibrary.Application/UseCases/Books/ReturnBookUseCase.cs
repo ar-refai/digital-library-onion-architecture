@@ -19,7 +19,7 @@ namespace DigitalLibrary.Application.UseCases.Books
             _unitOfWork = unitOfWork;
         }
 
-        public async Task ExcuteAsync(Guid bookId, CancellationToken cancellationToken = default)
+        public async Task ExecuteAsync(Guid bookId, CancellationToken cancellationToken = default)
         {
             // 1. fetch the aggregation (book)
             var book = await _bookRepository.GetByIdAsync(BookId.From(bookId), cancellationToken);

@@ -23,7 +23,7 @@ namespace DigitalLibrary.Infrastructure.Persistence.Configurations
                 value => BorrowRecordId.From(value)
                 ).HasField("_id");
             // BorrowerId
-            builder.Property(br => br.BorrowerId).HasField("_borrwerId").IsRequired();
+            builder.Property(br => br.BorrowerId).HasField("_borrowerId").IsRequired();
             // BorrowedAt
             builder.Property(br => br.BorrowedAt).HasField("_borrowedAt").IsRequired();
             // ReturnedAt

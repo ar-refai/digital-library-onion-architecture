@@ -21,7 +21,7 @@ namespace DigitalLibrary.Application.UseCases.Authors
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<Guid> Excute(string name, CancellationToken cancellationToken = default)
+        public async Task<Guid> ExecuteAsync(string name, CancellationToken cancellationToken = default)
         {
             // check for duplicate names
             var existing = await _authorRepository.GetByNameAsynce(name,cancellationToken);

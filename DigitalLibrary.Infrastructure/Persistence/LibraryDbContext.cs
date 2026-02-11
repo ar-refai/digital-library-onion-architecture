@@ -5,12 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using DigitalLibrary.Domain.Repositories;
 using DigitalLibrary.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
 using DigitalLibrary.Infrastructure.Persistence.Configurations;
+using Microsoft.EntityFrameworkCore;
 namespace DigitalLibrary.Infrastructure.Persistence
 {
     public class LibraryDbContext : DbContext, IUnitOfWork
     {
+        public LibraryDbContext(DbContextOptions options) : base(options)
+        {
+        }
+
         public DbSet<Book> Books => Set<Book>();
         public DbSet<Author> Authors => Set<Author>();
         public DbSet<BorrowRecord> BorrowRecords => Set<BorrowRecord>();

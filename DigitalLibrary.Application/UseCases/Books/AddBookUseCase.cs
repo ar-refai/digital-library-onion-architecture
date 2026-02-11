@@ -24,7 +24,7 @@ namespace DigitalLibrary.Application.UseCases.Books
             _authorRepository = authorRepository;
             _bookRepository = bookRepository;
         }
-        public async Task<Guid> ExcuteAsync (string title, string isbn, Guid authorId, CancellationToken cancellationToken = default)
+        public async Task<Guid> ExecuteAsync (string title, string isbn, Guid authorId, CancellationToken cancellationToken = default)
         {
             // 1. fetch the author
             var author = await _authorRepository.GetByIdAsync(AuthorId.From(authorId), cancellationToken);

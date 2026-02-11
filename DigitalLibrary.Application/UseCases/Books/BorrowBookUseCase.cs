@@ -19,7 +19,7 @@ namespace DigitalLibrary.Application.UseCases.Books
             _bookRepository = bookRepository;
         }
 
-        public async Task ExcuteAsync(Guid id, Guid borrowerId, CancellationToken cancellationToken = default)
+        public async Task ExecuteAsync(Guid id, Guid borrowerId, CancellationToken cancellationToken = default)
         {
             // 1. fetch the aggregate
             var book = await _bookRepository.GetByIdAsync(BookId.From(id),cancellationToken);
